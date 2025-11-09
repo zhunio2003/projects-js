@@ -80,7 +80,7 @@ main {
     border: 1px solid var(--border-glass);
     border-radius: 16px;
     padding: 2rem;
-
+    text-align: center;
     box-shadow: 
         inset 2px 2px 6px rgba(255, 255, 255, 0.05),
         inset -2px -2px 6px rgba(0, 0, 0, 0.1),
@@ -131,15 +131,197 @@ main {
     box-shadow: 
         0 4px 12px rgba(0, 0, 0, 0.2),
         inset 0 2px 4px rgba(255, 255, 255, 0.2);
+    
 }
 
-.icon svg {
-    color: red;
-    width: 32px;
-    height: 32px;
-    stroke-width: 2;
+/* BADGE */
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    align-items: center;
+
+    /* Efecto de vidrio base */
+    backdrop-filter: blur(5px);
+
+    /* Espaciado */
+    margin: 1rem 0;
 
 }
 
+.badge-done {
+    background: rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    color: #10b981;
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+}
 
 
+.badge-wip {
+    background: rgba(245, 158, 11 ,0.5);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    color: #f1c982;
+    box-shadow: 0 0 12px rgba(245, 158, 11 ,0.4);
+}
+
+.badge-planned {
+    background: rgba(59, 130, 246, 0.4);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    color: #88ace6;
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+}
+/* CARD CONTEND */
+
+.project-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.project-card .description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* TECNOLOGY CARD */
+.tech-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap; /* Si no cabe baja a la siguiente linea */
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.tag {
+    /* Efecto vidrio azul */
+    background: rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    backdrop-filter: blur(5px);
+
+    /* Forma de pildora */
+    padding: 0.375rem 0.75rem;
+    border-radius: 999px;
+    
+    /* Texto */
+    font-size: 0.95rem;
+    color: #60a5fa;;
+    font-weight: 500;
+
+}
+
+/* CARD AZULES */
+.project-card:nth-child(1) .icon,
+.project-card:nth-child(4) .icon {
+    background: linear-gradient(135deg, #324399 0%, #101520 100%);
+    box-shadow: inset 0 1px 2px rgba(79, 88, 214, 0.2),
+              0 4px 10px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.project-card:nth-child(1) .icon svg,
+.project-card:nth-child(4) .icon {
+    color: #9fadf5;
+}
+
+/*CARD ROJO */
+.project-card:nth-child(2) .icon ,
+.project-card:nth-child(5) .icon,
+.project-card:nth-child(9) .icon {
+    background: linear-gradient(135deg, #993232 0%, #290808 100%);
+    box-shadow: inset 0 1px 2px rgba(79, 88, 214, 0.2),
+              0 4px 10px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.project-card:nth-child(2) .icon,
+.project-card:nth-child(5) .icon,
+.project-card:nth-child(9) .icon {
+    color: #e98484;
+}
+
+/* CARD VERDE */
+.project-card:nth-child(3) .icon,
+.project-card:nth-child(8) .icon {
+    background: linear-gradient(135deg, #4bf5c2 0%, rgb(14, 51, 29) 100%);
+    box-shadow: inset 0 1px 2px rgba(79, 88, 214, 0.2),
+              0 4px 10px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.project-card:nth-child(3) .icon svg,
+.project-card:nth-child(8) .icon svg {
+    color: #89ecce;
+}
+
+/* CARD AMARILLO */
+.project-card:nth-child(6) .icon {
+    background: linear-gradient(135deg, #f1de31 0%, #4d460a 100%);
+    box-shadow: inset 0 1px 2px rgba(79, 88, 214, 0.2),
+              0 4px 10px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.project-card:nth-child(6) .icon svg{
+    color: #ccc47e;
+}
+
+/* CARD MORADO */
+.project-card:nth-child(7) .icon {
+    background: linear-gradient(135deg, #a92eb4 0%, #29062c 100%);
+    box-shadow: inset 0 1px 2px rgba(79, 88, 214, 0.2),
+              0 4px 10px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.project-card:nth-child(7) .icon svg{
+    color: #db78e4;
+}
+
+/* FOOTER */
+
+
+/* RESPONSIVE DESIGN */
+
+/* Tablets (pantallas menores a 900px) */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columnas */
+    gap: 1.5rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Móviles (pantallas menores a 600px) */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;  /* Menos padding */
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;  /* 1 columna */
+    gap: 1rem;
+  }
+  
+  .hero {
+    padding: 2rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+}
